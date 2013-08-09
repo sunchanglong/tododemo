@@ -272,8 +272,8 @@ $(function() {
         content: this.input.val(),
         order:   this.todos.nextOrder(),
         done:    false,
-        user:    AV.User.current()
-       // ACL:     new AV.ACL(AV.User.current())
+        user:    AV.User.current(),
+        ACL:     new AV.ACL(AV.User.current())
       });
 
       this.input.val('');
